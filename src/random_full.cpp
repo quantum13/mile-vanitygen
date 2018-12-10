@@ -12,12 +12,9 @@ int main(int argc, char* argv[]) {
     uint64_t i=0;
     while(true) {
         CreateKeyPair(priv, pub);
+        checkKey(argc, argv, priv, pub);
 
-        if (startsWithCaseInsensitive(pub.ToBase58CheckString(), argv[1])) {
-            cout << priv.ToBase58CheckString() << " " << pub.ToBase58CheckString() <<  endl;
-        }
-
-        if (++i%100000==0) {
+        if (++i%1000000==0) {
             cout << i <<  endl;
         }
     }
