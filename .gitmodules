@@ -1,0 +1,3 @@
+[submodule "vendor/mile-crypto"]
+	path = vendor/mile-crypto
+	url = https://github.com/mile-core/mile-crypto
